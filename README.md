@@ -35,7 +35,7 @@ Posteriormente foi realizado um processamento de imagem, que consistiu em realiz
 No exemplo de processamento realizado acima observa-se respectivamente a imagem original e a imagem após o redimensionamento.
 
 
-## Resultados finais do processamento
+## 3. Resultados finais do processamento
 
 Para a realização do pose estimation foi utilizado o modelo MediaPipe Pose, um modelo de pose estimation de alta precisão e que utilizar deep learning para realizar a predição, esse modelo é focado em pose estimation para humanos, o que representou um certo desafio ao buscar utilizá-lo para um dataset com bovinos.
 
