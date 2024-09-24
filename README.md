@@ -11,15 +11,15 @@ Após o carregamento do dataset, foi realizada uma exploração das keys(['image
 
 Além disso, foi realizada uma análise exploratória para entender a distribuição das imagens por categoria animal e para destacar a quantidade de imagens referentes aos bovinos.
 
-![Quantidade de imagens por espécie]({95269770-27E1-4CE1-87D2-91026A20D8C7}.png)
+![Quantidade de imagens por espécie](images/{95269770-27E1-4CE1-87D2-91026A20D8C7}.png)
 
 Através do gráfico percebe-se que a maior parte das imagens do dataset são de cachorros, enquanto que a minoria do dataset é representada por bovinos, contendo apenas 842 imagens.
 
 Após essa constatação, foram plotadas algumas amostras do dataset, que serviram para aprofundar o conhecimento do dataset. Ademais, constatou-se que as 842 imagens de bovinos correspondem a aproximadamente 13% da composição do dataset.
-![representação dos bovinos]({81F83D5D-3CCF-42EF-B622-9D9CB5857685}.png)
+![representação dos bovinos](images/{81F83D5D-3CCF-42EF-B622-9D9CB5857685}.png)
 
 Por fim, durante a exploração buscou-se também entender mais sobr a distribuição de keypoints por espécie, ou seja, entender como se comporta a variação de pose estimation para cada tipo de animal. Pórem, notou-se que todas as imagens e, consequentemente, todas as espécies possuem o mesmo número(20) de keypoints.
-![Distribuição de keypoints por animal]({FBC7873E-D57D-407E-BD5A-63B4E773AA20}.png)
+![Distribuição de keypoints por animal](images/{FBC7873E-D57D-407E-BD5A-63B4E773AA20}.png)
 Nesse gráfico, observa-se o número de keypoints total por espécie animal, ao plotar esse gráfico pela primeira vez foi possível perceber que ele é muito semelhante ao gráfico de número de imagens por espécie animal. Aprofundando mais na exploração  dos keypoints, foi observado que todas as imagens possuem a mesma quantidade de keypoints(20).
 
 ## 2. Filtragem e Processamento do Dataset
@@ -29,8 +29,8 @@ Primeiramente , foi realizada uma filtragem para manter apenas as imagens de bov
 Além disso, após a realização de uma análise no annotations de bovinos, foi possível perceber que haviam imagens repetidas, pois em muitos casos existia mais de um bovino na imagem, sendo assim a imagem aparecia mais de uma vez no annotations. Portanto, após filtrar no dataset de annotations bovinos, encontrou-se 534 imagens únicas no dataset.
 
 Posteriormente foi realizado um processamento de imagem, que consistiu em realizar o redimensionamento destas, esse processamento é importante para garantir a uniformidade no tamanho das imagens, o que é muito valioso quando busca-se realizar o treinamento ou o transfer learning de modelos de redes neurais, ainda que esse não seja o caso é muito interessante garantir que as imagens possuam as mesmas dimensões que são 480x480.
-![Imagem original]({E1DFBBC0-EF11-4591-8F8F-8051CB758DD4}.png)
-![Imagem redimensionada]({472D9D90-8438-4E8E-9511-3E37AEC790AA}.png)
+![Imagem original](images/{E1DFBBC0-EF11-4591-8F8F-8051CB758DD4}.png)
+![Imagem redimensionada](images/{472D9D90-8438-4E8E-9511-3E37AEC790AA}.png)
 
 No exemplo de processamento realizado acima observa-se respectivamente a imagem original e a imagem após o redimensionamento.
 
@@ -41,11 +41,11 @@ Para a realização do pose estimation foi utilizado o modelo MediaPipe Pose, um
 
 Foram inputadas 100 imagens aleatórias do dataset de bovinos para a realização da inferência pelo modelo, porém apenas em 15 imagens o modelo conseguiu realizar alguma predição, como pode ser observado alguns exemplos de predições realizadas abaixo:
 
-![Predição 1]({39685B2A-10BF-4E26-9336-5E3414EF1AB6}.png)
+![Predição 1](images/{39685B2A-10BF-4E26-9336-5E3414EF1AB6}.png)
 
-![Predição 2]({7D3A912C-1A9D-4C7F-99B4-28372BA462C9}.png)
+![Predição 2](images/{7D3A912C-1A9D-4C7F-99B4-28372BA462C9}.png)
 
-![Predição 3]({41728835-3A4D-4B2F-A354-3C7F03C47AD4}.png)
+![Predição 3](images/{41728835-3A4D-4B2F-A354-3C7F03C47AD4}.png)
 
 Nesse sentido, facilmente nota-se que o modelo não consegue realizar predições de bovinos com precisão, ao contrário de humanos, para os quais o modelo consegue ter uma alta precisão ao fazer o pose estimation.
 
